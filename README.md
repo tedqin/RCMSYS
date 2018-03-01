@@ -1,6 +1,6 @@
-## 上创项目-flask-基于协同过滤的图书推荐系统
+## 上创项目-flask+python-基于协同过滤的图书推荐系统
 
-### flask1.0.2+python2.7
+### flask1.0.2 + python2.7
 
 ### 运行： ``./start.sh``
 
