@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="jumbotron text-center">
+  <div class="container">
+    <a href="/" class="lang-logo">
+      <img src="../static/lang-logo.png">
+    </a>
+    <h1>Welcome,New user!</h1>
+    <p>According to your department, we recommand some books for you. </p>
+  </div>
+</div>
+
+    <div class="container">
+        <table id="table_id_example" class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Your recommandation</th>
+                    <th>Top</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                {% for i in range(30) %}
+                    <tr>
+                        <td>{{ books[i] }}</td>
+                        <td>{{ ranklist[i] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

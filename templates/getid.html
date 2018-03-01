@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="jumbotron text-center">
+  <div class="container">
+    <a href="/" class="lang-logo">
+      <img src="../static/lang-logo.png">
+    </a>
+    <h1>Book Recommeder System</h1>
+    <p>Please enter your id</p>
+      <div style="width: 40%;margin: auto">
+        <form method="post" action="/get_id">
+        <link href='http://fonts.googleapis.com/css?family=Sofia' rel='stylesheet' type='text/css'>
+            <div class="form-group ">
+              <input type="text" class="form-control" name ="userid" id = 'userid'/>
+            </div>
+            <button type="submit" class="form-control btn btn-lg btn-primary"><span class="glyphicon glyphicon-flash"></span> Submit</button>
+        </form>
+          <br/>
+          <form method="post" action="/adduser">
+              <button type="submit" class="form-control btn btn-lg btn-primary"><span class="glyphicon glyphicon-plus"></span> New User</button>
+          </form>
+      </div>
+  </div>
+</div>
+    <div class="container">
+        <div class="alert alert-info text-center" role="alert">
+            Shanghai Universities Students' Innovative Project, Tongji University.
+            <br />
+            Team: Letian Qin, Shuyu Yuan, Bincheng Yang. More infomation:<a href="#">Github</a>
+        </div>
+    </div>
+{% endblock %}

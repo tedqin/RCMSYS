@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="jumbotron text-center">
+  <div class="container">
+    <a href="/" class="lang-logo">
+      <img src="../static/lang-logo.png">
+    </a>
+    <h1>Book Recommeder System</h1>
+    <p>This is a book recommender system built on flask using the collaborative filtering algorithm.It suggests books that the users may prefer based on users or items.</p>
+    <a type="button" class="btn btn-lg btn-default" href="/get_id_page"><span class="glyphicon glyphicon-flash"></span> Getting Started</a>
+    <a type="button" class="btn btn-lg btn-primary" href="https://github.com/GitYbc/RCMSYS"><span class="glyphicon glyphicon-download"></span> Source on GitHub</a>
+  </div>
+</div>
+<div class="container">
+  <hr>
+  <div class="row">
+    <div class="col-md-6">
+      <h3><span class="glyphicon glyphicon-info-sign"></span> How this system works</h3>
+      <ul>
+        <li>This system takes user id as an input.</li>
+        <li>based on user : It then find people that similar to the user.</li>
+        <li>based on item : or it then find items that similar to what the user like</li>
+        <li>we alse provide a top10 book ranking list</li>
+      </ul>
+    </div>
+    <div class="col-md-6">
+      <h3><span class="glyphicon glyphicon-link"></span> Issues</h3>
+      <ul>
+        <li>Right now, the app uses the collaborative filtering algorithm.</li>
+          <li>In the future we would like to add a book-marking system.</li>
+          <li>The item-based algorithm may be slow.</li>
+          <li>It doesn't work on real time data.</li>
+      </ul>
+    </div>
+  </div> <!-- row -->
+    <div class="container">
+        <div class="alert alert-info text-center" role="alert">
+            Shanghai Universities Students' Innovative Project, Tongji University.
+            <br />
+            Team: Letian Qin, Shuyu Yuan, Bincheng Yang. More infomation:<a href="#">Github</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

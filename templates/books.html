@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="jumbotron text-center">
+  <div class="container">
+    <a href="/" class="lang-logo">
+      <img src="../static/lang-logo.png">
+    </a>
+      <h1>Recommendation result</h1>
+      <p>According to your records, we provide the following recommendations sincerely.</p>
+  </div>
+</div>
+
+    <div class="container">
+        <table id="table_id_example" class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Based on user</th>
+                    <th>Based on items</th>
+                    <th>Top</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                {% for i in range(30) %}
+                    <tr>
+                        <td>{{ base_user[i][1] }}</td>
+                        <td>{{ base_item[i][1] }}</td>
+                        <td>{{ ranklist[i] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
